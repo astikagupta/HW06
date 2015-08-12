@@ -13,11 +13,24 @@
 # Imports
 
 # Body
-
+def is_abecedarian(word):
+    for i in range(len(word) - 1):
+    	
+    	count=0
+        if word[i] > word[i + 1]:
+            return False
+        
+    return True
 
 ##############################################################################
 def main():
-    pass  # Call your function(s) here.
-
+ 	fo = open("words.txt","r")
+	count = 0
+	for line in fo:
+		word=line.strip()
+		if is_abecedarian(word):
+			count+= 1
+			print ("the word is {0}".format(word))
+	print count
 if __name__ == '__main__':
     main()

@@ -16,11 +16,33 @@
 # Imports
 
 # Body
+def uses_all(word,letters):
+
+	
+	flag=False
+	
+	for i in letters:
+		if i in word:
+			flag=True
+		else:
+			flag=False
+			break
+
+
+	if flag==True:
+		return True
 
 
 ##############################################################################
 def main():
-    pass  # Call your function(s) here.
+	fo = open("words.txt","r")
+	count = 0
+	for line in fo:
+		word=line.strip()
+		if uses_all(word,"aeiou"):
+			count+= 1
+			print ("the word is {0}".format(word))
+	print count
 
 if __name__ == '__main__':
     main()

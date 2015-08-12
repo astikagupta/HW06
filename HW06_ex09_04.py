@@ -18,10 +18,34 @@
 
 # Body
 
+def uses_only(word,letters):
+	count=0
+	flag=False
+	
+	for i in word:
+		if i in letters:
+			flag=True
+		else:
+			flag=False
+			break
+
+
+	if flag==True:
+		return True
+
 
 ##############################################################################
 def main():
-    pass  # Call your function(s) here.
+	fo=open("words.txt","r")
+	count = 0
+	for line in fo:
+		word=line.strip()
+		if uses_only(word,"acefhlo"):
+			count+= 1
+			print "the word is {0}".format(word)
+	print count
+   
+    
 
 if __name__ == '__main__':
     main()

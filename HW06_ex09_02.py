@@ -13,11 +13,24 @@
 # Imports
 
 # Body
-
-
+def has_no_e():
+	f = open("words.txt","r")
+	count1 = 0
+	count2=0
+	for line in f:
+		if 'e' not in line:
+			count1+= 1
+		count2+= 1
+	print count1
+	print count2
+	x=(count1/float(count2))*100.0
+	print ("percentage:" + str(x))
 ##############################################################################
 def main():
-    pass  # Call your function(s) here.
+	
+	has_no_e()
+	
+
 
 if __name__ == '__main__':
     main()

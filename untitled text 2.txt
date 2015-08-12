@@ -1,0 +1,21 @@
+import random
+def func1():
+	fo = open("text.txt","a")
+	for i in range(10):
+		x=random.randint(1,25)
+		fo.write(x)
+	fo.close()
+	
+	
+	
+	
+	
+	
+	
+	
+def main():
+	func1()
+	
+	
+if __name__ == '__main__':
+    main()
